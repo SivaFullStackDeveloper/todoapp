@@ -24,7 +24,7 @@ const intialVar= async()=>{
 
 }
 const listentoport = async()=>{
-    app.listen(port,()=>{
+    app.listen(process.env.heroku || port,()=>{
         console.log(port);
     })
 }
@@ -35,7 +35,7 @@ const connectiontodb = async()=>{
    try{
    
        
-        mongoose.connect(url, {
+        mongoose.connect( url, {
             
            useNewUrlParser: false,
            autoIndex: false,
