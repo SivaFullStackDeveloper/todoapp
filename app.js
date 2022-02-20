@@ -24,7 +24,7 @@ const intialVar= async()=>{
 
 }
 const listentoport = async()=>{
-    app.listen(process.env.heroku || port,()=>{
+    app.listen(process.env.heroku||port,()=>{
         console.log(port);
     })
 }
